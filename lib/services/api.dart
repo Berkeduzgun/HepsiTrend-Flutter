@@ -1,0 +1,1 @@
+// sunucuya baglanip veri alip veri vermek burda gerceklesecek.
