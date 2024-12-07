@@ -122,7 +122,12 @@ lib/
 
 ## Ekran Görüntüleri
 
-[Uygulama ekran görüntüleri buraya eklenecek]
+![Yükleme Ekranı](assets/screenshots/1.png)
+![Yükleme Ekranı2](assets/screenshots/2.png)
+![Ana Ekran](assets/screenshots/3.png)
+
+
+
 
   
 
