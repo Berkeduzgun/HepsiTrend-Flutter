@@ -1,5 +1,12 @@
+// ana ekran
+import 'package:dotlottie_loader/dotlottie_loader.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_app/core/constants.dart';
+import 'package:go_router/go_router.dart';
+import 'package:lottie/lottie.dart';
+
+import '../widgets/bottom_menu.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -7,50 +14,36 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 35, 47, 59),
       // AppBar
       appBar: AppBar(
-        title: const Text('HepsiTrend'),
+        title: const Text('Ana Sayfa'),
         actions: [
           IconButton(
-            icon: const Icon(CupertinoIcons.cart),
-            onPressed: () {
-              // Sepet ekranına yönlendirme
-            },
-          ),
-          IconButton(
-            icon: const Icon(CupertinoIcons.bell),
-            onPressed: () {
-              // Bildirimler ekranına yönlendirme
-            },
+            icon: const Icon(CupertinoIcons.app),
+            onPressed: () {},
           ),
         ],
       ),
 
       // Drawer (Yan Menü)
       drawer: Drawer(
+        backgroundColor: colors["surface"],
+        elevation: 0,
         child: Column(
           children: [
             // Drawer Header
             Container(
               height: 200,
-              color: Colors.blue,
+              // color: Colors.blue,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Icon(
                     CupertinoIcons.person_circle,
                     size: 80,
-                    color: Colors.white,
+                    color: Colors.black87,
                   ),
                   const SizedBox(height: 10),
-                  const Text(
-                    'Kullanıcı Adı',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                    ),
-                  ),
                 ],
               ),
             ),
@@ -62,16 +55,23 @@ class HomeScreen extends StatelessWidget {
                 Navigator.pop(context);
               },
             ),
-            ListTile(
-              leading: const Icon(CupertinoIcons.settings),
-              title: const Text('Ayarlar'),
+               ListTile(
+              leading: const Icon(CupertinoIcons.search),
+              title: const Text('History'),
               onTap: () {
                 Navigator.pop(context);
               },
             ),
             ListTile(
-              leading: const Icon(CupertinoIcons.square_arrow_right),
-              title: const Text('Çıkış Yap'),
+              leading: const Icon(CupertinoIcons.person),
+              title: const Text('Profile'),
+              onTap: () {
+                context.go("/profile");
+              },
+            ),
+            ListTile(
+              leading: const Icon(CupertinoIcons.settings),
+              title: const Text('Ayarlar'),
               onTap: () {
                 Navigator.pop(context);
               },
@@ -82,114 +82,97 @@ class HomeScreen extends StatelessWidget {
 
       // Ana içerik
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Kampanya Banner'ı
-          Container(
-            margin: const EdgeInsets.all(16),
-            padding: const EdgeInsets.all(16),
-            decoration: BoxDecoration(
-              color: Colors.blueGrey,
-              borderRadius: BorderRadius.circular(8),
-            ),
-            child: const Text(
-              'Bugün %20 İndirimli Ürünler!',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
+          Expanded(
+            child: Container(
+              padding: const EdgeInsets.all(16),
+              child: SizedBox(
+                width: double.infinity,
+                child: DotLottieLoader.fromAsset(
+                  "assets/motions/q2.lottie",
+                  frameBuilder: (BuildContext ctx, DotLottie? dotlottie) {
+                    if (dotlottie != null) {
+                      return Lottie.memory(dotlottie.animations.values.single);
+                    } else {
+                      return Container();
+                    }
+                  },
+                ),
               ),
             ),
           ),
-
-          // Kategoriler
-          SizedBox(
-            height: 100,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: [
-                categoryItem('Elektronik', CupertinoIcons.tv),
-                categoryItem('Moda', CupertinoIcons.shift),
-                categoryItem('Ev', CupertinoIcons.house),
-                categoryItem('Spor', CupertinoIcons.sportscourt),
-                categoryItem('Kitaplar', CupertinoIcons.book),
-              ],
-            ),
-          ),
-
-          // Ürün Listesi
           Expanded(
             child: ListView(
-              padding: const EdgeInsets.all(16),
-              children: [
-                productItem('Akıllı Telefon', 'assets/images/phone.jpg', 12000),
-                productItem('Laptop', 'assets/images/laptop.jpg', 25000),
-                productItem('Ayakkabı', 'assets/images/shoes.jpg', 750),
-              ],
+            children: [
+              Text(
+                "bodySmall Text",
+                style: Theme.of(context).textTheme.bodySmall,
+                ),
+              Text(
+                "bodyMedium Text",
+                style: Theme.of(context).textTheme.bodyMedium,
+                ),
+              Text(
+                "bodyMedium Text",
+                style: Theme.of(context).textTheme.bodyLarge,
+                ),
+                Text(
+                "displaySmall Text",
+                style: Theme.of(context).textTheme.displaySmall,
+                ),
+                Text(
+                "displayMedium Text",
+                style: Theme.of(context).textTheme.displayMedium,
+                ),
+                Text(
+                "displayLarge Text",
+                style: Theme.of(context).textTheme.displayLarge,
+                ),
+                Text(
+                "headlineSmall Text",
+                style: Theme.of(context).textTheme.headlineSmall,
+                ),
+                Text(
+                "headlineMedium Text",
+                style: Theme.of(context).textTheme.headlineMedium,
+                ),
+                Text(
+                "headlineLarge Text",
+                style: Theme.of(context).textTheme.headlineLarge,
+                ),
+                Text(
+                "titleSmall Text",
+                style: Theme.of(context).textTheme.titleSmall,
+                ),
+                Text(
+                "titleMedium Text",
+                style: Theme.of(context).textTheme.titleMedium,
+                ),
+                Text(
+                "titleLarge Text",
+                style: Theme.of(context).textTheme.titleLarge,
+                ),
+                Text(
+                "labelSmall Text",
+                style: Theme.of(context).textTheme.labelSmall,
+                ),
+                Text(
+                "labelMedium Text",
+                style: Theme.of(context).textTheme.labelMedium,
+                ),
+                Text(
+                "labelLarge Text",
+                style: Theme.of(context).textTheme.labelLarge,
+                ),
+             ], 
             ),
-          ),
+          )
         ],
       ),
 
       // Alt navigasyon çubuğu
-      bottomNavigationBar: BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.home),
-            label: 'Ana Sayfa',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.search),
-            label: 'Keşfet',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.person),
-            label: 'Profil',
-          ),
-        ],
-        onTap: (index) {
-          // Navigasyon işlemleri buraya gelecek
-        },
-      ),
-    );
-  }
-
-  Widget categoryItem(String title, IconData icon) {
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 8),
-      padding: const EdgeInsets.all(8),
-      decoration: BoxDecoration(
-        color: Colors.grey[800],
-        borderRadius: BorderRadius.circular(8),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(icon, color: Colors.white, size: 30),
-          const SizedBox(height: 5),
-          Text(
-            title,
-            style: const TextStyle(color: Colors.white, fontSize: 14),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget productItem(String name, String imagePath, double price) {
-    return Card(
-      margin: const EdgeInsets.symmetric(vertical: 8),
-      child: ListTile(
-        leading: Image.asset(imagePath, width: 50, height: 50, fit: BoxFit.cover),
-        title: Text(name),
-        subtitle: Text('₺$price'),
-        trailing: IconButton(
-          icon: const Icon(CupertinoIcons.cart_badge_plus),
-          onPressed: () {
-            // Sepete ekleme işlemi
-          },
-        ),
-      ),
+      bottomNavigationBar: BottomMenu(),
     );
   }
 }
+  
