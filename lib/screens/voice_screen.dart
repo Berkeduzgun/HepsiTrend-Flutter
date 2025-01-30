@@ -73,13 +73,13 @@ class VoiceScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            // Divider
+            
             const Divider(
               color: Colors.white,
               thickness: 1,
               height: 40,
             ),
-            // Ekstra Bilgi
+            
             const Text(
               "Uygulamaya giriş yaparak daha fazla özelliğe erişebilirsiniz.",
               style: TextStyle(
