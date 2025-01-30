@@ -127,8 +127,7 @@ lib/
 ![Ana Ekran](assets/screenshots/3.png)
 
 ## Demo
-!<!-- Uploading "bandicam 2025-01-30 23-57-28-985.mp4"... -->
-
+https://github.com/user-attachments/assets/dcb593f4-e09c-42e6-9250-c83bd69f1c4c
 
 
 
