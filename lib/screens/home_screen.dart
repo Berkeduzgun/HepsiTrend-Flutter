@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       // AppBar
       appBar: AppBar(
-        title: const Text('Ana Sayfa'),
+        title: const Text('HepsiTrend'),
         actions: [
           IconButton(
             icon: const Icon(CupertinoIcons.cart),
@@ -91,19 +91,18 @@ class HomeScreen extends StatelessWidget {
       // Ana içerik
       body: Column(
         children: [
-          // Ürünlerin gösterileceği grid yapısı
           Expanded(
             flex: 3,
             child: Padding(
               padding: const EdgeInsets.all(16.0),
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2, // İki sütunlu grid
+                  crossAxisCount: 2, 
                   crossAxisSpacing: 16.0,
                   mainAxisSpacing: 16.0,
-                  childAspectRatio: 0.75, // Ürün kartlarının en-boy oranı
+                  childAspectRatio: 0.75, 
                 ),
-                itemCount: 4, // Ürün sayısı 4 olarak güncellendi
+                itemCount: 4, 
                 itemBuilder: (context, index) {
                   return ProductCard(index: index);
                 },
@@ -113,13 +112,13 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
 
-      // Alt navigasyon çubuğu
+      
       bottomNavigationBar: const BottomMenu(),
     );
   }
 }
 
-// Ürün kartı widget'ı
+
 class ProductCard extends StatelessWidget {
   final int index;
 
@@ -127,27 +126,26 @@ class ProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Ürün adları, fiyatları ve resim yolları
     final List<Map<String, dynamic>> products = [
       {
-        "name": "Spor Ayakkabı",
-        "price": 299.99,
-        "image": "assets/images/product_1.jpg", // assets/images klasöründeki resim
+        "name": "Cep Telefonu",
+        "price": 29999,
+        "image": "assets/images/product_1.jpg", 
       },
       {
-        "name": "Güneş Gözlüğü",
-        "price": 149.99,
-        "image": "assets/images/product_2.jpg", // assets/images klasöründeki resim
+        "name": "Ayakkabı",
+        "price": 499,
+        "image": "assets/images/product_2.jpg",
       },
       {
-        "name": "Kol Saati",
-        "price": 599.99,
-        "image": "assets/images/product_3.jpg", // assets/images klasöründeki resim
+        "name": "Bilgisayar",
+        "price": 21000,
+        "image": "assets/images/product_3.jpg", 
       },
       {
-        "name": "Cüzdan",
-        "price": 99.99,
-        "image": "assets/images/product_4.jpg", // assets/images klasöründeki resim
+        "name": "Masa",
+        "price": 999,
+        "image": "assets/images/product_4.jpg", 
       },
     ];
 
@@ -166,13 +164,13 @@ class ProductCard extends StatelessWidget {
             child: ClipRRect(
               borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
               child: Image.asset(
-                product["image"], // Resim yolu dinamik olarak belirleniyor
+                product["image"], 
                 fit: BoxFit.cover,
                 width: double.infinity,
               ),
             ),
           ),
-          // Ürün bilgileri
+          
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
