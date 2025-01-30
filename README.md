@@ -126,6 +126,9 @@ lib/
 ![Yükleme Ekranı2](assets/screenshots/2.png)
 ![Ana Ekran](assets/screenshots/3.png)
 
+## Demo
+!<!-- Uploading "bandicam 2025-01-30 23-57-28-985.mp4"... -->
+
 
 
 
