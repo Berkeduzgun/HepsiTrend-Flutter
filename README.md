@@ -129,7 +129,7 @@ lib/
 ![Giriş Ekranı](assets/screenshots/6.png)
 ![Profil Ekranı](assets/screenshots/7.png)
 ## Demo
-https://github.com/user-attachments/assets/dcb593f4-e09c-42e6-9250-c83bd69f1c4c
+https://github.com/user-attachments/assets/120b63df-bc02-4b43-bac4-41057325d3f6
 
 
 
