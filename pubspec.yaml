@@ -16,6 +16,7 @@ dependencies:
   google_fonts: ^6.2.1
   lottie: ^3.1.3
   shared_preferences: ^2.3.3
+  provider: ^6.0.0
 
 dev_dependencies:
   flutter_test:
@@ -25,7 +26,10 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-  - assets/images/
+  - assets/images/ product_1.jpg
+    product_2.jpg
+    product_3.jpg
+    _product_4.jpg
   - assets/icons/
   - assets/languages/
   - assets/motions/

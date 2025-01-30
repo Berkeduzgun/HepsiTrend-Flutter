@@ -5,7 +5,9 @@ import 'package:go_router/go_router.dart';
 import '../screens/history_screen.dart';
 import '../screens/loading_screen.dart';
 import '../screens/home_screen.dart';
+import '../screens/login_screen.dart';
 import '../screens/profile_screen.dart';
+import '../screens/register_screen.dart';
 import '../screens/search_screen.dart';
 import '../screens/voice_screen.dart';
 
@@ -28,6 +30,14 @@ final router = GoRouter(
     GoRoute(
       path: '/voice',
       builder:(context, state) => const VoiceScreen(),
+    ),
+    GoRoute(
+      path: '/login',
+      builder: (context, state) => const LoginScreen(),
+    ),
+     GoRoute(
+      path: '/register',
+      builder:(context, state) => const RegisterScreen(),
     ),
     GoRoute(
       path: '/search',
