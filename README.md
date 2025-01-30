@@ -124,8 +124,10 @@ lib/
 
 ![Yükleme Ekranı](assets/screenshots/1.png)
 ![Yükleme Ekranı2](assets/screenshots/2.png)
-![Ana Ekran](assets/screenshots/3.png)
-
+![Ana Ekran](assets/screenshots/4.png)
+![Giriş Ekranı](assets/screenshots/5.png)
+![Giriş Ekranı](assets/screenshots/6.png)
+![Profil Ekranı](assets/screenshots/7.png)
 ## Demo
 https://github.com/user-attachments/assets/dcb593f4-e09c-42e6-9250-c83bd69f1c4c
 
