@@ -126,6 +126,8 @@ lib/
 ![Yükleme Ekranı2](assets/screenshots/2.png)
 ![Ana Ekran](assets/screenshots/3.png)
 
+## Demo
+https://github.com/user-attachments/assets/dcb593f4-e09c-42e6-9250-c83bd69f1c4c
 
 
 
