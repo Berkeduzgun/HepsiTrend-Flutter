@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'core/routes.dart';
 import 'core/themes.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();  // Flutter widget'larını başlat
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => ThemeProvider(),
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -12,13 +18,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return Consumer<ThemeProvider>(builder: (context, themeProvider,child) {
     return MaterialApp.router(
       title: 'Flutter App',
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.light,
       theme: lightTheme,
       darkTheme: darkTheme,
       routerConfig: router,  // go_router yapılandırmamızı kullan
       debugShowCheckedModeBanner: false,  // Debug bandını kaldır
     );
-  }
+  });
+}
 }

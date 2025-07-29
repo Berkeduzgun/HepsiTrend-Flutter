@@ -13,7 +13,7 @@ class LoadingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold( 
       body: SizedBox.expand(
-        //width: double.infinity,
+        
         child: Column(
           children: [
             // Logo bölümü
@@ -29,8 +29,7 @@ class LoadingScreen extends StatelessWidget {
             ),
             
             
-            // Yükleniyor yazısı
-            //CircularProgressIndicator(),
+            
 
 
             InkWell(

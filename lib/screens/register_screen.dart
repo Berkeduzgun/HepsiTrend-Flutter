@@ -51,9 +51,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
               SizedBox(height: 10),
               ElevatedButton(
                 onPressed: () {
-                  context.go("/login");
+                  context.go("/home");
                 }, 
                 child: const Text("Kayıt Ol"),
+              ),
+              SizedBox(height: 10),
+              ElevatedButton(
+                onPressed: () {
+                  context.go("/login");
+                }, 
+                child: const Text("Giriş Yap"),
               ),
             ],
           ),
