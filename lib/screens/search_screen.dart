@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../core/constants.dart';
 import '../widgets/bottom_menu.dart';
 
@@ -9,67 +8,75 @@ class SearchScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        title: TextField(
+          decoration: InputDecoration(
+            hintText: "Ara",
+            prefixIcon: Icon(Icons.search),
+            filled: true,
+            fillColor: Colors.white,
+            border: OutlineInputBorder(),
+          ),
+        ),
+      ),
       body: ListView(
         children: [
+          SizedBox(height: 20),
           Text(
-            "Body Small Yazisi",
-            style: Theme.of(context).textTheme.bodySmall,
-          ),
-          Text(
-            "Body Medium Yazisi",
-            style: Theme.of(context).textTheme.bodyMedium,
-          ),
-          Text(
-            "Body Large Yazisi",
-            style: Theme.of(context).textTheme.bodyLarge,
-          ),
-          Text(
-            "Label Small Yazisi",
-            style: Theme.of(context).textTheme.labelSmall,
-          ),
-          Text(
-            "Label Medium Yazisi",
-            style: Theme.of(context).textTheme.labelMedium,
-          ),
-          Text(
-            "Label Large Yazisi",
-            style: Theme.of(context).textTheme.labelLarge,
-          ),
-          Text(
-            "Headline Small Yazisi",
-            style: Theme.of(context).textTheme.headlineSmall,
-          ),
-          Text(
-            "Headline Medium Yazisi",
-            style: Theme.of(context).textTheme.headlineMedium,
-          ),
-          Text(
-            "Headline Large Yazisi",
-            style: Theme.of(context).textTheme.headlineLarge,
-          ),
-          Text(
-            "Title Small Yazisi",
-            style: Theme.of(context).textTheme.titleSmall,
-          ),
-          Text(
-            "Title Medium Yazisi",
+            "Son Aramalar",
             style: Theme.of(context).textTheme.titleMedium,
           ),
-          Text(
-            "Title Large Yazisi",
-            style: Theme.of(context).textTheme.titleLarge,
+          SizedBox(height: 10),
+          ListTile(
+            leading: Icon(Icons.history),
+            title: Text("iPhone"),
+            onTap: () {},
           ),
-          Text(
-            "Display Small Yazisi",
-            style: Theme.of(context).textTheme.displaySmall,
+          ListTile(
+            leading: Icon(Icons.history),
+            title: Text("Kulaklık"),
+            onTap: () {},
           ),
+          
+          SizedBox(height: 20),
           Text(
-            "Display Medium Yazisi",
-            style: Theme.of(context).textTheme.displayMedium,
+            "Kategoriler",
+            style: Theme.of(context).textTheme.titleMedium,
           ),
+          SizedBox(height: 10),
+          ElevatedButton(
+            onPressed: () {},
+            child: Text("Elektronik"),
+          ),
+          SizedBox(height: 5),
+          ElevatedButton(
+            onPressed: () {},
+            child: Text("Moda"),
+          ),
+          SizedBox(height: 5),
+          ElevatedButton(
+            onPressed: () {},
+            child: Text("Ev & Yaşam"),
+          ),
+          
+          SizedBox(height: 20),
           Text(
-            "Display Large Yazisi",
-            style: Theme.of(context).textTheme.displayLarge,
+            "Öneriler",
+            style: Theme.of(context).textTheme.titleMedium,
+          ),
+          SizedBox(height: 10),
+          ListTile(
+            leading: Icon(Icons.star),
+            title: Text("MacBook"),
+            subtitle: Text("Popüler"),
+            onTap: () {},
+          ),
+          ListTile(
+            leading: Icon(Icons.star),
+            title: Text("Samsung"),
+            subtitle: Text("Çok aranan"),
+            onTap: () {},
           ),
         ],
       ),

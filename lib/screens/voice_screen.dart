@@ -74,7 +74,7 @@ class VoiceScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(15),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.3),
+                    color: const Color.fromARGB(255, 42, 103, 255).withOpacity(0.3),
                     spreadRadius: 1,
                     blurRadius: 8,
                     offset: const Offset(0, 4),
@@ -87,7 +87,7 @@ class VoiceScreen extends StatelessWidget {
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,
-                  foregroundColor: Colors.deepPurple,
+                  foregroundColor: Colors.blue,
                   padding: const EdgeInsets.symmetric(vertical: 18),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15),
