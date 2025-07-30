@@ -125,9 +125,9 @@ lib/
 ![Yükleme Ekranı](assets/screenshots/1.png)
 ![Yükleme Ekranı2](assets/screenshots/2.png)
 ![Ana Ekran](assets/screenshots/4.png)
-![Arama Ekranı](assets/screenshots/5.png)
-![Giriş Ekranı](assets/screenshots/6.png)
-![Profil Ekranı](assets/screenshots/7.png)
+![Arama Ekranı](assets/screenshots/14.png)
+![Giriş Ekranı](assets/screenshots/13.png)
+![Profil Ekranı](assets/screenshots/12.png)
 ![Giriş Ekranı](assets/screenshots/8.png)
 ![Kayıt Ekranı](assets/screenshots/9.png)
 ## Demo
