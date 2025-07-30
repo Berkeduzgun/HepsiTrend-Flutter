@@ -131,10 +131,7 @@ lib/
 ![Giriş Ekranı](assets/screenshots/8.png)
 ![Kayıt Ekranı](assets/screenshots/9.png)
 ## Demo
-https://github.com/user-attachments/assets/120b63df-bc02-4b43-bac4-41057325d3f6
-
-
-
+https://github.com/user-attachments/assets/7f730418-b73c-41f7-88a0-fa88836ac00e
   
 
 ## Projeye Katkı Sağlama
